@@ -141,9 +141,9 @@
 		var dataList = [];
 		for(var i=0;i<userList.length;i++){
 			var userStr = '';
-			if(task.userId==userList[i].userId && currnode.jointlySign==false){
-				userStr='[主办]';
-			}
+			//if(task.userId==userList[i].userId && currnode.jointlySign==false){
+			//	userStr='[主办]';
+			//}
 			if(userList[i].isSubmit){
 				userStr+='-已提交';
 			}

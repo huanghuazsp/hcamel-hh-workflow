@@ -201,7 +201,7 @@ public class WFOperService extends BaseService<BaseEntitySimple> {
 	public PagingData<Map<String, Object>> queryRuTaskPage(PageRange pageRange) {
 		String userId = userService.findLoginUserId();
 
-		String hql = "select a.id as id ,b.read as read,a.taskStartTime as taskStartTime,a.piName as piName,a.ownerName as ownerName,a.startUserName as startUserName,a.actName as actName,a.piid as piid from "
+		String hql = "select a.id as id ,b.read as read,b.isSubmit as isSubmit,a.taskStartTime as taskStartTime,a.piName as piName,a.ownerName as ownerName,a.startUserName as startUserName,a.actName as actName,a.piid as piid from "
 				+ WFRuTask.class.getName() + " a , " + WFRuTaskUser.class.getName()
 				+ " b  where a.id=b.taskId and b.userId=:userId ";
 		String hqlCount = "select count(b) from " + WFRuTask.class.getName() + " a , " + WFRuTaskUser.class.getName()

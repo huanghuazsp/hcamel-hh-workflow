@@ -9,6 +9,9 @@
 		var img = value == 0 ? '<img src="'+$.hh.property.img_email_close+'" />'
 				: '<img src="'+$.hh.property.img_email_open+'" />';
 		var managerType = data.managerType=='main'?'主办':'经办';
+		if(data.isSubmit){
+			managerType='<font color=green>'+managerType+'</font>';
+		}
 		return '<table><tr><td>'+img+'</td><td>'+managerType+'</td></tr></table>';
 	}
 	function daterender(value,data){
